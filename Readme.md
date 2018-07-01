@@ -18,6 +18,15 @@ Server.run(
 )
 ```
 
+```
+# in this directory
+npm install
+npm run build
+./lib/bs/native/serverexample.native
+```
+
+Then open `http://localhost:9876`
+
 ![screenshot](screenshot.png)
 
 Based on https://github.com/vbmithr/ocaml-websocket
