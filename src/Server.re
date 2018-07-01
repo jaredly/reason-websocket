@@ -59,7 +59,6 @@ module Server = (Config: Config) => {
       switch (Config.read(socket, 1024)) {
       | None => loop := false
       | Some(msg) =>
-        /* print_endline(Printf.sprintf(">> recieved '%S'", msg)); */
         let (method, path, headers) = Http.parse_request(msg);
         let shouldUpgrade =
           Http.StringMap.exists(
@@ -96,23 +95,6 @@ module UnixConfig = {
   let init = () => ();
   let acceptSocket = socket => socket;
 };
-
-/* let normalHandler = (handler, clientSocket) => {
-  let threadHandler = socket => {
-    handler(() =>
-      switch (Ssl.read(socket, buf, 0, bufsize)) {
-      | exception (Ssl.Read_error(_)) =>
-        log("A client has quit");
-        Ssl.shutdown(socket);
-        None;
-      | length =>
-        let msg = Bytes.sub(buf, 0, length);
-        Some(msg);
-      }
-    );
-  };
-  ignore(Thread.create(threadHandler, clientSocket));
-}; */
 
 let run = (~port, ~onMessage, ~httpFallback, ~config: (module Config)) => {
   let module Config = (val config);
