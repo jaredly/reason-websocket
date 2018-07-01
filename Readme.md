@@ -18,4 +18,6 @@ Server.run(
 )
 ```
 
+![screenshot](screenshot.png)
+
 Based on https://github.com/vbmithr/ocaml-websocket
