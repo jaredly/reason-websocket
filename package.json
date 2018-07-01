@@ -20,7 +20,7 @@
     "test": "npm run build && ./lib/bs/native/test.native",
     "clean": "bsb -clean-world"
   },
-  "dependencies": {
+  "// dependencies - disabled because it's just for examples": {
     "ocaml-ssl": "jaredly/ocaml-ssl"
   },
   "devDependencies": {

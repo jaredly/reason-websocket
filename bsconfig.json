@@ -9,16 +9,15 @@
     "./src",
     {"dir": "test", "type": "dev"},
   ],
-  // "c-linker-flags": ["-lssl", "-lcrypto"],
-  "bs-dependencies": ["ocaml-ssl"],
+  // "bs-dependencies": ["ocaml-ssl"],
   "ocaml-libraries": ["thread"],
   "namespaced": true,
   "entries": [{
     "backend": "native",
     "main-module": "Test"
-  }, {
-    "backend": "native",
-    "main-module": "SecureServerExample"
+  // }, {
+  //   "backend": "native",
+  //   "main-module": "SecureServerExample"
   }, {
     "backend": "native",
     "main-module": "ServerExample"
