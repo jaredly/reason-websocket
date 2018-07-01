@@ -13,20 +13,11 @@
   "ocaml-libraries": ["thread"],
   "namespaced": true,
   "entries": [{
-    "backend": "native",
-    "main-module": "Test"
-  // }, {
   //   "backend": "native",
   //   "main-module": "SecureServerExample"
-  }, {
+  // }, {
     "backend": "native",
     "main-module": "ServerExample"
-  }, {
-    "backend": "native",
-    "main-module": "Stalkd"
-  }, {
-    "backend": "native",
-    "main-module": "Stelnet"
   }],
   "refmt": 3,
 }
