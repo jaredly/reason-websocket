@@ -1,0 +1,29 @@
+{
+  "name": "reason-websocket",
+  "version": "0.0.0",
+  "keywords": [
+    "BuckleScript",
+    "ssl",
+    "reason"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaredly/ocaml-ssl.git"
+  },
+  "homepage": "https://github.com/jaredly/ocaml-ssl#readme",
+  "bugs": "https://github.com/jaredly/ocaml-ssl/issues",
+  "author": "Jared Forsyth",
+  "license": "MIT",
+  "scripts": {
+    "build": "bsb -make-world -backend native",
+    "watch": "bsb -make-world -backend native -w",
+    "test": "npm run build && ./lib/bs/native/test.native",
+    "clean": "bsb -clean-world"
+  },
+  "dependencies": {
+    "ocaml-ssl": "jaredly/ocaml-ssl"
+  },
+  "devDependencies": {
+    "bs-platform": "bsansouci/bsb-native#3.2.0"
+  }
+}
